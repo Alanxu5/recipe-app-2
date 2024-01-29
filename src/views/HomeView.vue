@@ -1,9 +1,27 @@
-<script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+<script lang="ts">
+import { defineComponent } from 'vue';
+import FilterPanel from '@/components/FilterPanel.vue'
+// import RecipeList from '@/components/RecipeList'
+
+export default defineComponent({
+  name: 'HomeView',
+  components: {
+    FilterPanel,
+  //  RecipeList
+  }
+})
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
+  <main :class="$style.home">
+    <FilterPanel />
+    <!-- <RecipeList />   -->
   </main>
 </template>
+
+<style lang="scss" module>
+  .home {
+    display: grid;
+    grid-template-columns: 225px auto;
+  }
+</style>
