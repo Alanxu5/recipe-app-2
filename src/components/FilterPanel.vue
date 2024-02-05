@@ -1,13 +1,14 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
-// import FilterSelect from '@/components/FilterSelect.vue'
+import FilterSelect from '@/components/FilterSelect.vue'
 import { useFilterStore } from '@/stores/filterStore'
+import { type Filter } from '../types'
 
 export default defineComponent({
   name: 'FilterPanel',
   components: {
-  //  FilterSelect
+    FilterSelect
   },
   setup() {
     const store = useFilterStore()
@@ -20,8 +21,8 @@ export default defineComponent({
     // recipeTypes() {
     //   return this.store.getRecipeTypes;
     // },
-    recipeMethods() {
-      return this.store.getFilters;
+    recipeMethods():Filter[] {
+      return this.store.getFilters.methods;
     }
   },
   created() {
@@ -35,8 +36,8 @@ export default defineComponent({
     <!-- <FilterSelect 
       :filter-name="'Type'"
       :filters="recipeTypes" /> -->
-    <!-- <FilterSelect 
+    <FilterSelect 
       :filter-name="'Method'"
-      :filters="recipeMethods" /> -->
+      :filters="recipeMethods" />
   </div> 
 </template>

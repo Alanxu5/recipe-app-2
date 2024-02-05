@@ -1,8 +1,9 @@
 import { defineStore } from 'pinia'
+import { type Filters } from '../types'
 
 export const useFilterStore = defineStore('useFilterStore', {
   state: () => ({ 
-    filters: []
+    filters: {} as Filters
   }),
   getters: {
     getFilters: (state) => {
@@ -22,7 +23,7 @@ export const useFilterStore = defineStore('useFilterStore', {
         const responseJson = await response.json();
 
         if (response.ok) {
-          this.filters = responseJson;
+          this.filters.methods = responseJson;
         } else {
           console.error(response);
         }   
