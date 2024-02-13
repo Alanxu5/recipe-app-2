@@ -5,5 +5,6 @@ export interface Filter {
 }
 
 export interface Filters {
-  methods: Filter[]
+  methods: Filter[],
+  types: Filter[]
 }

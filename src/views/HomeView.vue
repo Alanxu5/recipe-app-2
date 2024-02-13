@@ -1,13 +1,14 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
+
 import FilterPanel from '@/components/FilterPanel.vue'
-// import RecipeList from '@/components/RecipeList'
+import RecipeList from '@/components/RecipeList.vue'
 
 export default defineComponent({
   name: 'HomeView',
   components: {
     FilterPanel,
-  //  RecipeList
+    RecipeList
   }
 })
 </script>
@@ -15,7 +16,7 @@ export default defineComponent({
 <template>
   <main :class="$style.home">
     <FilterPanel />
-    <!-- <RecipeList />   -->
+    <RecipeList />  
   </main>
 </template>
 

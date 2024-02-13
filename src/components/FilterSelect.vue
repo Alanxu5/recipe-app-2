@@ -1,8 +1,9 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import type { PropType } from 'vue';
+
 import { useFilterStore } from '@/stores/filterStore'
-import { type Filter } from '../types'
+import { type Filter } from '../types/filter'
 
 export default defineComponent({
   name: 'FilterSelect',
