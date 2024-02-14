@@ -39,6 +39,13 @@ npm run dev
 npm run build
 ```
 
+### Test build locally
+
+```sh
+npm run build
+npm run preview
+```
+
 ### Run Unit Tests with [Vitest](https://vitest.dev/)
 
 ```sh
