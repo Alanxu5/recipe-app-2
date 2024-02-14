@@ -1,14 +1,14 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
-// import RecipeCard from '@/components/RecipeCard.vue'
+import RecipeCard from '@/components/RecipeCard.vue'
 import { useRecipeStore } from '@/stores/recipeStore'
 import { type Recipe } from '../types/recipe'
 
 export default defineComponent({
   name: 'RecipeList',
   components: {
-    // RecipeCard
+    RecipeCard
   },
   setup() {
     const store = useRecipeStore()
@@ -29,10 +29,11 @@ export default defineComponent({
 </script>
 
 <template>
-  <div :class="$style.container"
+  <div :class="$style.container">
+  <RecipeCard
       v-for="(recipe, index) in recipes"
-      :key="index">
-      {{ recipe }}
+      :key="index"
+      :recipe="recipe" /> 
   </div>
 </template>
 

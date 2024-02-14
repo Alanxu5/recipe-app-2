@@ -1,5 +1,9 @@
 export interface Recipe {
   id: number,
   name: string,
-  checked: boolean
+  description: string,
+  prepTime: number,
+  cookTime: number,
+  method: string,
+  type: string
 }
