@@ -31,7 +31,7 @@ export default defineComponent({
 .container {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  grid-template-rows: 85px auto 100px;
+  grid-template-rows: 125px auto 300px;
   grid-template-areas: "header header header"
                        "content content content"
                        "footer footer footer";
