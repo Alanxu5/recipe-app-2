@@ -31,7 +31,6 @@ export default defineComponent({
 
 <style lang="scss" module>
 .navigation {
-  height: 85px;
   display: grid;
   grid-template-columns: 150px 1fr;
   align-items: center;

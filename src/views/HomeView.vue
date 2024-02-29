@@ -32,6 +32,7 @@ export default defineComponent({
   .recipeBlock {
     height: 300px;
     background-color: linen;
+    margin-top: 25px;
     margin-bottom: 25px;
   }
 </style>

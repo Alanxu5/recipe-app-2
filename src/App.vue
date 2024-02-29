@@ -15,15 +15,41 @@ export default defineComponent({
 
 <template>
   <div
-    :class="$style.app">
-    <TheNavBar />
-    <RouterView />
+    :class="$style.container">
+    <TheNavBar
+      :class="$style.header" />
+    <RouterView
+      :class="$style.content" />
+    <div
+      :class="$style.footer">
+      Some Recipes
+    </div>
   </div>
 </template>
 
 <style lang="scss" module>
-.app {
+.container {
   display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 85px auto 100px;
+  grid-template-areas: "header header header"
+                       "content content content"
+                       "footer footer footer";
+}
+
+.header {
+  grid-area: header;
+  background-color: red;
+}
+
+.content {
+  grid-area: content;
+  background-color: green;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: blue;
 }
 
 a:-webkit-any-link {

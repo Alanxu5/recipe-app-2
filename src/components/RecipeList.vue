@@ -39,21 +39,27 @@ export default defineComponent({
 
 
 <style lang="scss" module>
-  @media only screen and (min-width: 992px) {
+  @media only screen and (min-width: 800px) {
     .container {
-      max-width: 800px;
+      max-width: 700px;
     }
   }
 
-  @media only screen and (min-width: 1300px) {
+  @media only screen and (min-width: 1000px) {
     .container {
-      max-width: 1075px;
+      max-width: 900px;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    .container {
+      max-width: 1100px;
     }
   }
   
-  @media only screen and (min-width: 1600px) {
+  @media only screen and (min-width: 1400px) {
     .container {
-      max-width: 1350px;
+      max-width: 1300px;
     }
   }
   
