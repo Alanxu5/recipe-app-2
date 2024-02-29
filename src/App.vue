@@ -1,11 +1,32 @@
-<script setup lang="ts">
+<script lang="ts">
 import { RouterView } from 'vue-router'
+import { defineComponent } from 'vue';
+
+import TheNavBar from '@/components/TheNavBar.vue'
+
+export default defineComponent({
+  name: 'App',
+  components: {
+    TheNavBar,
+    RouterView
+  }
+})
 </script>
 
 <template>
-  <RouterView />
+  <div
+    :class="$style.app">
+    <TheNavBar />
+    <RouterView />
+  </div>
 </template>
 
-<style scoped>
+<style lang="scss" module>
+.app {
+  display: grid;
+}
 
+a:-webkit-any-link {
+  text-decoration-line: none;
+}
 </style>

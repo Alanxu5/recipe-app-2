@@ -1,13 +1,13 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
-import FilterPanel from '@/components/FilterPanel.vue'
+// import FilterPanel from '@/components/FilterPanel.vue'
 import RecipeList from '@/components/RecipeList.vue'
 
 export default defineComponent({
   name: 'HomeView',
   components: {
-    FilterPanel,
+    // FilterPanel,
     RecipeList
   }
 })
@@ -15,7 +15,10 @@ export default defineComponent({
 
 <template>
   <main :class="$style.home">
-    <FilterPanel />
+    <!-- <FilterPanel /> -->
+    <div
+      :class="$style.recipeBlock">
+    </div>
     <RecipeList />  
   </main>
 </template>
@@ -23,6 +26,12 @@ export default defineComponent({
 <style lang="scss" module>
   .home {
     display: grid;
-    grid-template-columns: 225px auto;
+    justify-content: center;
+  }
+
+  .recipeBlock {
+    height: 300px;
+    background-color: linen;
+    margin-bottom: 25px;
   }
 </style>
