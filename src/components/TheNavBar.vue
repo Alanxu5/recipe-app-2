@@ -9,20 +9,25 @@ export default defineComponent({
 
 <template>
   <div :class="$style.navigation">
-    <RouterLink :to="{ name: 'home' }">
-      Some Recipes
-    </RouterLink>
     <div
       :class="$style.container">
-      <input 
-        placeholder="What do you want to cook?"/>
+      <RouterLink
+        :class="$style.routerLink"
+        :to="{ name: 'home' }">
+        Some Recipes
+      </RouterLink>
       <div
-        :class="$style.account">
-        <div>
-          BM
-        </div>
-        <div>
-          Acct
+        :class="$style.searchNav">
+        <input 
+          placeholder="What do you want to cook?" />
+        <div
+          :class="$style.account">
+          <div>
+            Bookmarks
+          </div>
+          <div>
+            Acct
+          </div>
         </div>
       </div>
     </div>
@@ -32,24 +37,35 @@ export default defineComponent({
 <style lang="scss" module>
 .navigation {
   display: grid;
-  grid-template-columns: 150px 1fr;
-  align-items: center;
+  grid-template-columns: [page-start] minmax(0,1fr) repeat(7,[col-start] 110px [col-end] 40px) [col-start] 110px [col-end] minmax(0,1fr) [page-end];
 }
 
 .container {
-  height: 100%;
+  height: 75px;
   display: flex;
+  flex-direction: row;
+  grid-column: col-start 1/col-end 8;
   align-items: center;
-  grid-gap: 30px;
 
-  input {
-    flex-grow: 1;
-    height: 40%;
+  .routerLink {
+    width: 200px;
   }
 
-  .account {
+  .searchNav {
     display: flex;
-    grid-gap: 30px;
+    height: 65%;
+    width: calc(100vw - 200px);
+    column-gap: 10px;
+
+    input {
+      flex: 1 1;
+    }
+
+    .account {
+      display: flex;
+      column-gap: 10px;
+      align-items: center;
+    }
   }
 }
 

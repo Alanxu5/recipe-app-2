@@ -31,7 +31,7 @@ export default defineComponent({
 .container {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  grid-template-rows: 125px auto 300px;
+  grid-template-rows: auto auto 300px;
   grid-template-areas: "header header header"
                        "content content content"
                        "footer footer footer";
@@ -39,7 +39,9 @@ export default defineComponent({
 
 .header {
   grid-area: header;
-  background-color: red;
+  width: 100%;
+  background-color: white;
+  position: fixed;
 }
 
 .content {
