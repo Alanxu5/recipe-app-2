@@ -41,7 +41,7 @@ export default defineComponent({
 }
 
 .container {
-  height: 75px;
+  height: 85px;
   display: flex;
   flex-direction: row;
   grid-column: col-start 1/col-end 8;
@@ -53,7 +53,7 @@ export default defineComponent({
 
   .searchNav {
     display: flex;
-    height: 65%;
+    height: 55%;
     width: calc(100vw - 200px);
     column-gap: 10px;
 

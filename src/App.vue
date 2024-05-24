@@ -41,12 +41,14 @@ export default defineComponent({
   grid-area: header;
   width: 100%;
   background-color: white;
-  position: fixed;
+  position: sticky;
+  top: 0;
+  border-bottom: .5px solid gray;
 }
 
 .content {
   grid-area: content;
-  background-color: green;
+  background-color: white;
 }
 
 .footer {
